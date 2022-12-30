@@ -1,0 +1,15 @@
+@use '../../../scss' as *;
+
+.search-photos-container {
+	.search-photos-text-container {
+		width: 90%;
+		margin-inline: auto;
+
+		.search-photos-results-text {
+			span {
+				font-weight: 600;
+				text-transform: capitalize;
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+@use '../../scss' as *;
+
+.photos-layout-container {
+	margin-top: 2.5rem;
+
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+@media screen and (min-width: 768px) {
+	.photos-layout-container {
+		width: 95%;
+		margin-inline: auto;
+
+		column-gap: 1.5rem;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.photos-layout-container {
+		width: 80%;
+		max-width: 1440px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

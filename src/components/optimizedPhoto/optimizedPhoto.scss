@@ -1,0 +1,51 @@
+@use '../../scss' as *;
+
+.optimized-image-container {
+	margin-bottom: 2.5rem;
+
+	.optimized-image-mobile-text-container {
+		margin: 0 0 1rem 0.5rem;
+
+		display: flex;
+		align-items: center;
+
+		.optimized-image-user-image {
+			margin-right: 1rem;
+
+			max-width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			box-shadow: 0 0 1px 1px rgba($color: $color-gray, $alpha: 0.25);
+
+			.image {
+				object-fit: cover;
+				border-radius: 50%;
+			}
+		}
+
+		.optimized-image-user-name {
+			font-size: 1rem;
+			font-weight: 500;
+		}
+	}
+
+	.optimized-image {
+		position: relative;
+
+		// .optimized-lazy-load-image {}
+		.optimized-blurhah-image-placeholder {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.optimized-image-container {
+		margin-bottom: 1.5rem;
+		.optimized-image-mobile-text-container {
+			display: none;
+		}
+	}
+}
