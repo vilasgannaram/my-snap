@@ -1,0 +1,13 @@
+.search-container {
+	.search-text-container {
+		width: 90%;
+		margin: 1.5rem auto 0;
+
+		.search-results-text {
+			.search-result {
+				font-weight: 600;
+				text-transform: capitalize;
+			}
+		}
+	}
+}

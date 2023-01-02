@@ -1,13 +1,23 @@
-@use './scss' as *;
-
 :root {
-	font-family: $font-arial;
+	// fonts
+	--font-arial: Arial, Helvetica, sans-serif, Inter, Avenir;
+	--font-segoe: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+	// colors
+	--color-black: #111;
+	--color-white: #ffffff;
+	--color-white-light: #e0e0e0;
+	--color-gray: #acacac;
+	--color-gray-light: #eeeeee;
+	--color-gray-dark: #767676;
+
+	font-family: var(--font-arial);
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;
 
-	color: $color-black;
-	background-color: $color-white;
+	color: var(--color-black);
+	background-color: var(--color-white);
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;

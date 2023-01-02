@@ -4,12 +4,13 @@ const unsplash = createApi({
 	accessKey: import.meta.env.VITE_REACT_APP_UNSPALSH_API_ACCESS_KEY,
 });
 
-export const getSearchPhotos = async (searchWord, page = 1) => {
+export const getSearchPhotos = async (searchWord, page = 1, perPage = 10) => {
 	const result = await unsplash.search.getPhotos({
 		query: searchWord,
 		page: page,
-		perPage: 10,
+		perPage: perPage,
 	});
 
-	return result;
+	if (result.errors) return { type: 'error', message: result.errors[0] };
+	return result.response;
 };

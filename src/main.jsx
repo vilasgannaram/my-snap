@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.scss';
+import './assets/styles/index.scss';
 
 import {
 	createBrowserRouter,
@@ -9,19 +9,15 @@ import {
 	Route,
 } from 'react-router-dom';
 
-// import { OptimizedPhoto } from './components';
-import { Root, Home, Search, SearchPhotos } from './routes';
-
-// import data from '../photo.json';
+import { Root, Home, Search, SearchPhotos } from './pages';
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path='/' element={<Root />}>
-			{/* <Route index element={<OptimizedPhoto image={data} />} /> */}
 			<Route index element={<Home />} />
 
-			<Route path='s/photos/:photo' element={<Search />}>
-				<Route index element={<SearchPhotos />} />
+			<Route path='search' element={<Search />}>
+				<Route index path='photos/:photo' element={<SearchPhotos />} />
 			</Route>
 		</Route>
 	)
