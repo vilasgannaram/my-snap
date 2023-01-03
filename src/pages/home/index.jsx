@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Photos from './photos';
 import './home.scss';
 
 const Home = () => {
@@ -59,7 +60,7 @@ const Home = () => {
 				</div>
 			</div>
 
-			{/* <div style={{ height: 500 }}></div> */}
+			<Photos />
 		</section>
 	);
 };
