@@ -23,29 +23,28 @@ const OptimizedPhoto = ({ image }) => {
 	}, []);
 
 	return (
-		<li className='optimized-image-container'>
-			<Link
-				to={`/${image.user.username}`}
-				className='optimized-image-mobile-text-container'
-			>
-				<figure className='optimized-image-user-image'>
-					<img
-						loading='lazy'
-						className='image'
-						src={image.user.profile_image.medium}
-						alt=''
-					/>
-				</figure>
+		<li className='image-container'>
+			<div className='links-wrapper'>
+				<Link to={`/${image.user.username}`} className='user-link'>
+					<figure className='user-image'>
+						<img
+							loading='lazy'
+							className='image'
+							src={image.user.profile_image.medium}
+							alt=''
+						/>
+					</figure>
 
-				<h2 className='optimized-image-user-name'>
-					{image.user.first_name && image.user.first_name}{' '}
-					{image.user.last_name && image.user.last_name}
-				</h2>
-			</Link>
+					<h2 className='user-name'>
+						{image.user.first_name && image.user.first_name}{' '}
+						{image.user.last_name && image.user.last_name}
+					</h2>
+				</Link>
+				<Link to={`/photos/${image?.id}`} className='image-link' />
+			</div>
 
-			<figure ref={ref} className='optimized-image'>
+			<figure ref={ref} className='optimized-image-wrapper'>
 				<LazyLoadImage
-					className='optimized-lazy-load-image'
 					width={width}
 					height={height}
 					src={image.urls.full}
@@ -56,7 +55,7 @@ const OptimizedPhoto = ({ image }) => {
 
 				{/* blur hash placeholder */}
 				{!loaded && (
-					<div className='optimized-blurhah-image-placeholder'>
+					<div className='blurhash-image-placeholder'>
 						<Blurhash
 							hash={image.blur_hash}
 							width={width}
