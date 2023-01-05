@@ -1,96 +1,99 @@
 .home-container {
-	.home-search-container {
-		margin: 0 auto;
-		height: calc(100vh - 20vh);
+  .home-search-container {
+    margin: 0 auto;
+    height: calc(100vh - 20vh);
 
-		background: url(../../assets/images/hero-section-background-mobile.jpg)
-			center/cover no-repeat;
+    background: url(../../assets/images/hero-section-background-mobile.jpg)
+      center/cover no-repeat;
 
-		position: relative;
-		.home-search-wrapper {
-			width: 80%;
-			max-width: 450px;
+    position: relative;
+    .home-search-wrapper {
+      width: 80%;
+      max-width: 450px;
 
-			position: absolute;
-			top: 50%;
-			left: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
 
-			transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
 
-			.home-search-text-container {
-				color: var(--color-white);
-				font-family: var(--font-seoge);
+      .home-search-text-container {
+        color: var(--color-white);
+        font-family: var(--font-seoge);
 
-				.home-description {
-					margin-top: 0.8rem;
-					font-weight: 500;
-					font-size: 1rem;
-				}
-			}
+        .home-description {
+          margin-top: 0.8rem;
+          font-weight: 500;
+          font-size: 1rem;
+        }
+      }
 
-			.home-search-form-container {
-				margin-top: 1.5rem;
-				position: relative;
+      .home-search-form-container {
+        margin-top: 1.5rem;
+        position: relative;
 
-				input[type='text'] {
-					padding: 1rem 3rem;
-				}
+        input[type='text'] {
+          padding: 1rem 3rem;
+        }
 
-				button[type='submit'] {
-					padding: 0.8rem;
-					color: var(--color-dark-gray);
-					background-color: transparent;
+        button[type='submit'] {
+          padding: 0.8rem;
+          color: var(--color-dark-gray);
+          background-color: transparent;
 
-					position: absolute;
-					top: 0;
-					left: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          cursor: pointer;
 
-					cursor: pointer;
-				}
-			}
-		}
+          &.material-symbols-outlined {
+            color: var(--color-gray);
+          }
+        }
+      }
+    }
 
-		.home-search-author-container {
-			position: absolute;
-			bottom: 1.8rem;
-			left: 2rem;
+    .home-search-author-container {
+      position: absolute;
+      bottom: 1.8rem;
+      left: 2rem;
 
-			.home-search-author {
-				color: var(--color-gray);
-				font-family: var(--font-segoe);
-				font-size: 12px;
-				font-weight: 500;
+      .home-search-author {
+        color: var(--color-gray);
+        font-family: var(--font-segoe);
+        font-size: 12px;
+        font-weight: 500;
 
-				.author {
-					color: var(--color-white);
-					font-size: 14px;
-					font-weight: 600;
-				}
-			}
-		}
-	}
+        .author {
+          color: var(--color-white);
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
-	.home-container {
-		.home-search-container {
-			background-image: url(../../assets/images/hero-section-background-tablet.jpg);
+  .home-container {
+    .home-search-container {
+      background-image: url(../../assets/images/hero-section-background-tablet.jpg);
 
-			.home-search-wrapper {
-				max-width: 600px;
-			}
-		}
-	}
+      .home-search-wrapper {
+        max-width: 600px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
-	.home-container {
-		.home-search-container {
-			background-image: url(../../assets/images/hero-section-background-desktop.jpg);
+  .home-container {
+    .home-search-container {
+      background-image: url(../../assets/images/hero-section-background-desktop.jpg);
 
-			.home-search-wrapper {
-				max-width: 800px;
-			}
-		}
-	}
+      .home-search-wrapper {
+        max-width: 800px;
+      }
+    }
+  }
 }
