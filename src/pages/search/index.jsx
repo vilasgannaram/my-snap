@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Outlet, useParams } from 'react-router-dom';
-import './search.scss';
+import './index.scss';
 
 const Search = () => {
 	const { photo } = useParams();
