@@ -53,7 +53,7 @@ const OptimizedPhoto = ({ image }) => {
 					/>
 
 					{/* blur hash placeholder */}
-					{!loaded && image.blur_hash.length > 6 && (
+					{!loaded && image.blur_hash && image.blur_hash.length > 6 ? (
 						<div className='blurhash-image-placeholder'>
 							<Blurhash
 								hash={image.blur_hash}
@@ -64,7 +64,7 @@ const OptimizedPhoto = ({ image }) => {
 								punch={1}
 							/>
 						</div>
-					)}
+					) : null}
 				</figure>
 			</Link>
 		</li>
